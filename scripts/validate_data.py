@@ -75,9 +75,9 @@ EXPECTED_HEADERS = {
 }
 
 EXPECTED_ROW_COUNTS = {
-    "ecompressor_products.csv": 48,
-    "ecompressor_sources.csv": 35,
-    "ecompressor_test_conditions.csv": 12,
+    "ecompressor_products.csv": 61,
+    "ecompressor_sources.csv": 43,
+    "ecompressor_test_conditions.csv": 25,
 }
 
 QUALITY_VALUES = {"A", "B", "C"}

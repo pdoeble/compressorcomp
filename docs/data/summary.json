@@ -6,16 +6,16 @@
   ],
   "comparison_note": "Cooling-capacity values are public reported values under mixed test bases. Use test-condition metadata before making compressor-to-compressor comparisons.",
   "confidence_counts": {
-    "high": 34,
+    "high": 38,
     "low": 4,
-    "medium": 10
+    "medium": 19
   },
   "counts": {
     "manufacturers": 15,
-    "products": 48,
+    "products": 61,
     "segments": 8,
-    "sources": 35,
-    "test_conditions": 12
+    "sources": 43,
+    "test_conditions": 25
   },
   "manufacturers": [
     "Aotecar",
@@ -36,22 +36,22 @@
   ],
   "metric_ranges": {
     "cooling_capacity_kw": {
-      "count": 22,
+      "count": 35,
       "max": 29,
-      "min": 4
+      "min": 3.5
     },
     "displacement_cc_rev": {
-      "count": 40,
+      "count": 53,
       "max": 120,
       "min": 8
     },
     "launch_or_public_year": {
-      "count": 48,
+      "count": 61,
       "max": 2026,
       "min": 2017
     },
     "voltage_max_vdc": {
-      "count": 35,
+      "count": 48,
       "max": 950,
       "min": 400
     }
@@ -59,7 +59,7 @@
   "missing_fields": {
     "cooling_capacity_kw": 26,
     "displacement_cc_rev": 8,
-    "electric_power_peak_kw": 47,
+    "electric_power_peak_kw": 51,
     "mass_kg": 17,
     "voltage_max_vdc": 13
   },
@@ -69,6 +69,7 @@
     "R134a",
     "R134a/R1234yf",
     "R134a/R407C",
+    "R407C",
     "R744"
   ],
   "segments": [
@@ -82,8 +83,8 @@
     "Special_Purpose"
   ],
   "source_quality_counts": {
-    "A": 35,
-    "B": 11,
-    "C": 2
+    "A": 39,
+    "B": 12,
+    "C": 10
   }
 }

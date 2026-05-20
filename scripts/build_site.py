@@ -73,10 +73,7 @@ def normalize_record(row: dict[str, str], numeric_fields: set[str]) -> dict[str,
 def write_json(filename: str, payload: Any) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     path = DATA_DIR / filename
-    path.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
-    )
+    path.write_bytes((json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8"))
 
 
 def range_summary(rows: list[dict[str, Any]], field: str) -> dict[str, int | float | None]:
