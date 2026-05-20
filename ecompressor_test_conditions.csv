@@ -6,8 +6,8 @@ TC_SANDEN_SHS45,SANDEN_SHS45_400,Manufacturer brochure,R134a/R1234yf,,7000,1.9,0
 TC_SANDEN_SEE45,SANDEN_SEE45_400_800,Manufacturer brochure,R134a/R1234yf,,8000,1.5,0.3,10,5,,cooling_capacity,10,kW,SA06,
 TC_SANDEN_SEE33,SANDEN_SEE33_400_800,Manufacturer brochure,R134a/R1234yf,,8000,1.5,0.3,10,5,,cooling_capacity,5,kW,SA07,
 TC_TCCI_HV_FAMILY,TCCI_QPE34_400,Manufacturer sales sheet,R134a,nominal,max_speed,1.57,0.3,10,5,,family_test_basis,,,"TC01","Applies to TCCI published cooling-capacity points for HV family"
-TC_VALEO_ESR33,ESTRA_ESR33,Manufacturer datasheet,R134a/R1234yf,,9000,,,,,max_cooling_capacity,8,kW,ES01,"Datasheet states 8.0kW @ 9.0k rpm; no pressure basis published on sheet"
+TC_VALEO_ESR33,ESTRA_ESR33,Manufacturer datasheet,R134a/R1234yf,,9000,,,,,,max_cooling_capacity,8,kW,ES01,"Datasheet states 8.0kW @ 9.0k rpm; no pressure basis published on sheet"
 TC_SONGZ_SZC,SONGZ_SZC33,GB/T22068-2018,R134a,,,,,,,,max_cooling_capacity,7.1,kW,SZ03,"Official page cites maximum cooling capacity per GB/T22068-2018"
-TC_SONGZ_SZB,SZONGZ_SZB33,Manufacturer page,R134a,,,,,,,,max_cooling_capacity,9.5,kW,SZ01,"Pressure details not published"
-TC_GUCHEN_GC34A900,GUCHEN_GC34A900,Case study,,"",6000,,,,,cooling_capacity,5.67,kW,GU01,"Case study quotes 5670W at 6000rpm"
+TC_SONGZ_SZB,SONGZ_SZB33,Manufacturer page,R134a,,,,,,,,max_cooling_capacity,9.5,kW,SZ01,"Pressure details not published"
+TC_GUCHEN_GC34A900,GUCHEN_GC34A900,Case study,,"",6000,,,,,,cooling_capacity,5.67,kW,GU01,"Case study quotes 5670W at 6000rpm"
 TC_AOTECAR_E26A,AOTECAR_E26A,Manufacturer page,R134a/R1234yf,,,,,,,,max_cooling_capacity,6,kW,AO02,"Condition basis not published"

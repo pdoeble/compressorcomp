@@ -1,0 +1,89 @@
+{
+  "built_from": [
+    "ecompressor_products.csv",
+    "ecompressor_sources.csv",
+    "ecompressor_test_conditions.csv"
+  ],
+  "comparison_note": "Cooling-capacity values are public reported values under mixed test bases. Use test-condition metadata before making compressor-to-compressor comparisons.",
+  "confidence_counts": {
+    "high": 34,
+    "low": 4,
+    "medium": 10
+  },
+  "counts": {
+    "manufacturers": 15,
+    "products": 48,
+    "segments": 8,
+    "sources": 35,
+    "test_conditions": 12
+  },
+  "manufacturers": [
+    "Aotecar",
+    "Bosch Mobility",
+    "DENSO",
+    "ESTRA",
+    "Guchen",
+    "Hanon Systems",
+    "Highly",
+    "MAHLE",
+    "MHI Thermal Systems",
+    "SONGZ",
+    "Sanden",
+    "Subros",
+    "TCCI",
+    "Toyota Industries",
+    "Valeo"
+  ],
+  "metric_ranges": {
+    "cooling_capacity_kw": {
+      "count": 22,
+      "max": 29,
+      "min": 4
+    },
+    "displacement_cc_rev": {
+      "count": 40,
+      "max": 120,
+      "min": 8
+    },
+    "launch_or_public_year": {
+      "count": 48,
+      "max": 2026,
+      "min": 2017
+    },
+    "voltage_max_vdc": {
+      "count": 35,
+      "max": 950,
+      "min": 400
+    }
+  },
+  "missing_fields": {
+    "cooling_capacity_kw": 26,
+    "displacement_cc_rev": 8,
+    "electric_power_peak_kw": 47,
+    "mass_kg": 17,
+    "voltage_max_vdc": 13
+  },
+  "refrigerants": [
+    "Not specified",
+    "R1234yf/R290",
+    "R134a",
+    "R134a/R1234yf",
+    "R134a/R407C",
+    "R744"
+  ],
+  "segments": [
+    "Battery_TMS",
+    "Bus_Coach",
+    "Hybrid",
+    "LCV",
+    "MD_HD_Truck",
+    "Off_Highway",
+    "Passenger_Car_BEV_xEV",
+    "Special_Purpose"
+  ],
+  "source_quality_counts": {
+    "A": 35,
+    "B": 11,
+    "C": 2
+  }
+}

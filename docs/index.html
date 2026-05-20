@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Public HV eCompressor Capability Trend</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="assets/app.js" defer></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="content">
+        <p class="eyebrow">Public data extract</p>
+        <h1>Public HV eCompressor capability trend</h1>
+        <p class="lede">
+          A source-visible view of public high-voltage electric refrigerant compressor data.
+          Cooling-capacity values are shown as reported and should not be treated as a
+          homogeneous benchmark without the listed test-condition context.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="band controls-band">
+        <div class="content">
+          <div class="filter-grid" aria-label="Dataset filters">
+            <label>
+              Segment
+              <select id="segment-filter"></select>
+            </label>
+            <label>
+              Refrigerant
+              <select id="refrigerant-filter"></select>
+            </label>
+            <label>
+              Source quality
+              <select id="quality-filter"></select>
+            </label>
+            <label>
+              Confidence
+              <select id="confidence-filter"></select>
+            </label>
+            <label>
+              Manufacturer
+              <select id="manufacturer-filter"></select>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="content">
+          <div id="metric-strip" class="metric-strip"></div>
+          <div class="note" id="comparison-note"></div>
+        </div>
+      </section>
+
+      <section class="band chart-band">
+        <div class="content chart-layout">
+          <article class="chart-panel">
+            <div class="section-heading">
+              <h2>Voltage class over public year</h2>
+              <p>Higher-voltage public entries cluster in the recent 800-900 V classes.</p>
+            </div>
+            <div class="axis-controls" aria-label="Timeline axis controls">
+              <label>
+                X axis
+                <select id="timeline-x-axis"></select>
+              </label>
+              <label>
+                Y axis
+                <select id="timeline-y-axis"></select>
+              </label>
+            </div>
+            <div id="timeline-chart" class="chart-slot">Loading chart...</div>
+          </article>
+
+          <article class="chart-panel">
+            <div class="section-heading">
+              <h2>Voltage, displacement and capacity</h2>
+              <p>Bubble size uses reported cooling capacity where available.</p>
+            </div>
+            <div class="axis-controls" aria-label="Bubble chart axis controls">
+              <label>
+                X axis
+                <select id="bubble-x-axis"></select>
+              </label>
+              <label>
+                Y axis
+                <select id="bubble-y-axis"></select>
+              </label>
+            </div>
+            <div id="bubble-chart" class="chart-slot">Loading chart...</div>
+          </article>
+
+          <article class="chart-panel">
+            <div class="section-heading">
+              <h2>Reported capacity by displacement</h2>
+              <p>Only rows with both displacement and reported cooling capacity are plotted.</p>
+            </div>
+            <div class="axis-controls" aria-label="Capacity chart axis controls">
+              <label>
+                X axis
+                <select id="capacity-x-axis"></select>
+              </label>
+              <label>
+                Y axis
+                <select id="capacity-y-axis"></select>
+              </label>
+            </div>
+            <div id="capacity-chart" class="chart-slot">Loading chart...</div>
+          </article>
+
+          <article class="chart-panel">
+            <div class="section-heading">
+              <h2>Manufacturer-year voltage matrix</h2>
+              <p>Cell color is the maximum public voltage in that manufacturer-year bucket.</p>
+            </div>
+            <div class="axis-controls" aria-label="Matrix axis controls">
+              <label>
+                X axis
+                <select id="matrix-x-axis"></select>
+              </label>
+              <label>
+                Y axis
+                <select id="matrix-y-axis"></select>
+              </label>
+            </div>
+            <div id="matrix-chart" class="chart-slot">Loading chart...</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="content two-column">
+          <article>
+            <div class="section-heading">
+              <h2>Data quality</h2>
+              <p>Missing fields and source quality are kept visible because the public record is uneven.</p>
+            </div>
+            <div id="quality-panel" class="quality-grid"></div>
+          </article>
+          <article>
+            <div class="section-heading">
+              <h2>Source distribution</h2>
+              <p>Quality labels follow the CSV extract and remain visible in the charts and table.</p>
+            </div>
+            <div id="source-panel" class="quality-grid"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="band table-band">
+        <div class="content">
+          <div class="section-heading">
+            <h2>Product evidence table</h2>
+            <p id="table-count"></p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Manufacturer</th>
+                  <th>Year</th>
+                  <th>Segment</th>
+                  <th>Refrigerant</th>
+                  <th>Max Vdc</th>
+                  <th>cc/rev</th>
+                  <th>Cooling kW</th>
+                  <th>Quality</th>
+                  <th>Test basis</th>
+                  <th>Source</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody id="product-table"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
